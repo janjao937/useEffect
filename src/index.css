@@ -6,3 +6,25 @@
 body{
   box-sizing: border-box;
 }
+.button__group{
+  display: flex;
+  gap:10px;
+  margin: 20px 0;
+}
+button{
+  padding: 10px 20px;
+  background-color: sandybrown;
+  color:  black;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+ul{
+  padding: 20px;
+}
+li{
+  list-style: none;
+  border:solid 1px;
+  padding:  10px;
+  border-radius: 4px;
+}
