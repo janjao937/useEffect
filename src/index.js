@@ -9,7 +9,7 @@ const Token ="eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNGFmNjQ2N2JlNzA2ZTRiNzI0YzZjZmUwN
 const App =()=>{
   const [Keyword,setKeyword] = useState("");
   const [movieList,setMovieList] = useState([]);
-  const [allPage,setAllPage] = useState(1);
+  const [allPage,setAllPage] = useState(0);
 
   const OnChangeHandler = (e)=>{
     setKeyword(e.target.value);
@@ -52,7 +52,11 @@ const App =()=>{
         <button type="submit"> Search</button>
       </form>
       <div>
-           
+
+        {Array.from(Array(allPage).keys()).map((n,index) => (
+          <button key={index}>{n + 1}</button>
+        ))}
+        
       </div>
       <div className="Movie-list">
          
