@@ -6,3 +6,41 @@
 body{
   box-sizing: border-box;
 }
+.App{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+
+}
+.Header{
+  font-size: 48px;
+  text-transform: uppercase;
+}
+.Search{
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+
+  gap:10px;
+
+}
+.Search > *{
+  padding: 10px;
+  border-radius: 10px;
+}
+.Search>input:focus{
+ outline: none;
+}
+.Search >button{
+  background-color: sandybrown;
+  cursor: pointer;
+  border: none;
+}
+.Movie-list{
+
+}
+.Movie{
+
+}
