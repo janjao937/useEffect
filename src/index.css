@@ -37,10 +37,16 @@ body{
   background-color: sandybrown;
   cursor: pointer;
   border: none;
+  border: solid;
 }
 .Movie-list{
+  display: flex;
+  padding-top: 10px;
+  gap: 20px;
 
 }
 .Movie{
-
+  border:1px solid;
+  padding: 20px;
+  border-radius: 20px;
 }
