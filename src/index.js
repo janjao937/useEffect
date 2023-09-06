@@ -37,6 +37,7 @@ const App = () => {
       const data = await response.json();
       setMovieList(data.results);
       setAllPage(data.total_pages);
+      setCurrentPage(1);
       // const movie = data.results;
 
     } catch (error) {
