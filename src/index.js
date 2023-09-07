@@ -6,6 +6,7 @@ import './index.css';
 const App = ()=>{
   const [category,setCategoty] = useState("");
   const [count,setCount] =useState(0);
+  const [currentList,setCurrentList] = useState([]);
   //useEffect(()=>{},[]) //function,dependency array
   // useEffect(()=>console.log("Banana Effect"));//ทำงานหลัง Render & Re-render
   useEffect(()=>{console.log("First render")},[]);//จะ render แค่หลังครั้งแรก
@@ -20,6 +21,7 @@ const App = ()=>{
         });
         let data = await response.json();
         console.log(data);
+        setCurrentList(data);
 
       }catch(error){
         console.log(error);
@@ -53,7 +55,9 @@ const App = ()=>{
     
 
       <ul className="list">
-        <li className="list-item">item-1</li>
+        
+        {/* {currentList.map((e)=><li className="list-item">{e}</li>)} */}
+        {currentList.map((e)=><li key={e.id} className="list-item">{e.title||e.name||e.body}</li>)}
       </ul>
      
     </div>
